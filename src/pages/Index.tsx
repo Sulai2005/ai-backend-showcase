@@ -1,13 +1,27 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import Hero from "@/components/sections/Hero";
+import Skills from "@/components/sections/Skills";
+import Experience from "@/components/sections/Experience";
+import ProjectsPreview from "@/components/sections/ProjectsPreview";
+import { useEffect } from "react";
 
 const Index = () => {
+  useEffect(() => {
+    document.title = "AI/ML Backend Intern Portfolio";
+  }, []);
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
-    </div>
+    <main id="home">
+      <Hero />
+      <Skills />
+      <Experience />
+      <ProjectsPreview />
+      <section id="contact" className="py-12">
+        <div className="container mx-auto text-center">
+          <h2 className="text-2xl font-semibold tracking-tight">Get in touch</h2>
+          <p className="mt-2 text-muted-foreground">Add your contact form or email link here.</p>
+        </div>
+      </section>
+    </main>
   );
 };
 
